@@ -1,0 +1,1910 @@
+2015-03-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .simplecov, .travis.yml, Gemfile, Rakefile, linguistics.gemspec:
+	Prep for travis-ci builds
+	[9966bdb76f0e] [github/master, tip]
+
+	* spec/helpers.rb, spec/linguistics/en/articles_spec.rb:
+	Fix some missed RSpec 3 updates
+	[a4ce7f00edb7]
+
+	* .rvmrc:
+	Bump the rvmrc Ruby version
+	[ec800816d314]
+
+2015-01-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/linkparser.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics/iso639_spec.rb:
+	Fix up some tests for the newest version of RSpec
+	[4f23d2cfc1f8]
+
+2013-12-02  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.0.3 for changeset 6829f7b30b38
+	[bf624e6c6b51]
+
+	* .hgsigs:
+	Added signature for changeset ca93740ec59c
+	[6829f7b30b38] [v2.0.3]
+
+	* History.rdoc, lib/linguistics.rb:
+	Bump the patch version, update history
+	[ca93740ec59c]
+
+	* .simplecov, Manifest.txt, README.rdoc,
+	examples/generalize_sentence.rb, experiments/TEMPLATE.rb.tpl,
+	experiments/api.rb, experiments/conjunct-with-block.rb,
+	experiments/farmobjs.rb, experiments/lafcadio_plural.rb,
+	experiments/lprintf.rb, lib/linguistics.rb,
+	lib/linguistics/en/articles.rb, lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitives.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/numbers.rb, lib/linguistics/en/participles.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/languagebehavior.rb, spec/constants.rb,
+	spec/helpers.rb, spec/lib/constants.rb, spec/lib/helpers.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitives_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb,
+	spec/linguistics/en/numbers_spec.rb,
+	spec/linguistics/en/participles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/stemmer_spec.rb,
+	spec/linguistics/en/titlecase_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics/inflector_spec.rb, spec/linguistics/iso639_spec.rb,
+	spec/linguistics/monkeypatches_spec.rb, spec/linguistics_spec.rb:
+	Convert to modern RSpec syntax/config.
+	[fea5d38ea57f]
+
+	* lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	Merge pull request #5 from ippeiukai/fix-
+	issue10-past_tense_for_words_end_with_y
+
+	fix past tense for words end with y
+	[de381a81754d]
+
+	* lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	Merge pull request #4 from ippeiukai/fix-
+	issue8-past_tense_for_doubling_verbs
+
+	fix past tense for doubling verbs
+	[f521914decb0]
+
+	* Merge pull request #3 from ippeiukai/fix-
+	issue9-present_participle_for_words_ending_with_e
+
+	fix present participle conjugation of verbs that end with 'e'
+	[36821e2da2c8]
+
+2013-10-28  Ippei UKAI  <ippei_ukai@mac.com>
+
+	* lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	fix past tense for words end with y
+	[66887f823d20]
+
+	* lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	fix past tense for doubling verbs
+	[e3211dc778ba]
+
+	* lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	fix present participle conjugation of verbs that end with 'e'
+	[5aff030d59b0]
+
+2013-09-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, .rvm.gems, .tm_properties, Gemfile, Rakefile:
+	Updating dependencies, adding Gemfile
+	[47e042fad85f]
+
+2013-02-27  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.0.2 for changeset a516c984a9a1
+	[8b0c64852da3]
+
+	* .hgsigs:
+	Added signature for changeset d2eeec0b7832
+	[703b6021e69c]
+
+	* History.rdoc, lib/linguistics.rb:
+	Bump the patch version, update history.
+	[e86105440abd]
+
+	* .rvmrc, lib/linguistics.rb:
+	Fix for Ruby 2: don't memoize the inflector.
+	[ef83e49f84ab]
+
+2013-02-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.0.1 for changeset d8d00bf937f2
+	[930c605bcc46]
+
+	* .hgsigs:
+	Added signature for changeset 5240c28c80bd
+	[10745470d592]
+
+	* History.rdoc, lib/linguistics.rb:
+	Bump patch version, update history.
+	[17320384c55f]
+
+2012-12-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile:
+	Add missing loggability dependency to the gem (fixes #3).
+	[839b0adae20e]
+
+2012-11-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/pluralization.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb:
+	Adding some monkeypatch specs (refs #1), fixing some edge-case
+	pluralizations.
+	[7edf115cf3e3]
+
+2012-10-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.rdoc:
+	The inevitable post-release documentation fixes.
+	[d0c4250a2b3d]
+
+	* .hgtags:
+	Added tag v2.0.0 for changeset 1359338b7128
+	[cfa80f44c5e6]
+
+	* .hgsigs:
+	Added signature for changeset a7cda4b8747c
+	[990523f4bd9d]
+
+	* History.rdoc, Manifest.txt, lib/linguistics.rb,
+	lib/linguistics/en/stemmer.rb, spec/lib/helpers.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/stemmer_spec.rb:
+	Prep for release.
+	[9728dc3f3a14]
+
+	* spec/linguistics/en/stemmer_spec.rb,
+	spec/linguistics/en/stemmer_spec.rb.rb:
+	Fix the name of the stemmer spec
+	[e8362b3d9f95]
+
+	* .rvm.gems, Rakefile, lib/linguistics/en/stemmer.rb,
+	spec/linguistics/en/stemmer_spec.rb.rb:
+	Adding support for Ruby-Stemmer
+	[ee1727bbfacd]
+
+	* lib/linguistics/en/wordnet.rb, spec/linguistics/en/wordnet_spec.rb:
+	Make wordnet re-use the error it raised when it was required if it
+	couldn't be loaded
+	[100843338d95]
+
+2012-10-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .rvm.gems, Rakefile, spec/lib/helpers.rb:
+	Add coverage task.
+	[1bb423b2f1ab]
+
+2012-08-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* Manifest.txt:
+	Fix the manifest
+	[7b9e452a28b4]
+
+	* .pryrc, lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/conjugation.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/mixins.rb, spec/linguistics/mixins_spec.rb,
+	spec/linguistics_spec.rb:
+	Loggability cleanup
+	[dff0d2a21aa7]
+
+2012-08-20  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb, spec/lib/helpers.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Fix Linguistics::EN::WordNet.synsets.
+	[22b62066fe77]
+
+	* Manifest.txt:
+	Add the en-language tester to the manifest
+	[6041c3b0374a]
+
+2012-08-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/endocs.rb:
+	Added tester script for EN-module docs
+	[a4bb1f4086e9]
+
+	* .pryrc, README.rdoc, lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/articles.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitives.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/numbers.rb, lib/linguistics/en/participles.rb,
+	lib/linguistics/en/pluralization.rb,
+	lib/linguistics/en/titlecase.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/inflector.rb, lib/linguistics/iso639.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/participles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/titlecase_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Documentation fixes, bugfixes
+	[adce12f8e8b1]
+
+2012-08-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb:
+	LinkParser spec fixes.
+	[8bb3f0e5bf23]
+
+	* .rvm.gems, .tm_properties, Manifest.txt, README.rdoc, Rakefile,
+	lib/linguistics.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/utils.rb,
+	spec/lib/helpers.rb, spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitives_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb,
+	spec/linguistics/en/numbers_spec.rb,
+	spec/linguistics/en/participles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/titlecase_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics_spec.rb:
+	Prepping for 2.x release
+	[f43c7e06a8e2]
+
+	* History.rdoc, LICENSE, Manifest.txt, lib/linguistics/en.rb,
+	lib/linguistics/en/articles.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitives.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/numbers.rb, lib/linguistics/en/participles.rb,
+	lib/linguistics/en/pluralization.rb,
+	lib/linguistics/en/titlecase.rb, lib/linguistics/en/wordnet.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Prepping for release
+	[10188c389e09]
+
+2012-04-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .pryrc, .rvm.gems, .rvmrc, History.md, History.rdoc, README.md,
+	README.rdoc, Rakefile:
+	Update build environment.
+	[afa3dc314dea]
+
+2011-08-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb, lib/linguistics/utils.rb:
+	Comment cleanup
+	[88a57e5d8d0c]
+
+2011-07-12  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/conjugation.rb:
+	Removed the giant debugging log dump in favor of short diagnostics.
+	[899b1aba1bab]
+
+	* Rakefile:
+	Updated linkparser dependency to the latest release
+	[6aa3779835ba]
+
+	* spec/linguistics/en/conjugation_spec.rb:
+	Turn off debugging output in the conjugation spec
+	[51eb3740d667]
+
+	* README.md, lib/linguistics/en.rb, lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	Adding English verb conjugation via Robert Berry (bdigital)'s fork
+	on Github.
+	[08d2eb61db3f]
+
+	* Rakefile, spec/lib/helpers.rb:
+	Updated for recent versions of RSpec.
+	[9d542f78a7f8]
+
+2011-07-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, Rakefile:
+	De-YARD.
+	[95eb3c1a2337]
+
+2011-02-07  Michael Granger  <ged@FaerieMUD.org>
+
+	* Manifest.txt:
+	Reordering Manifest to make check_manifest work.
+	[6dcc8d23992e]
+
+	* .rvmrc:
+	Adding a project .rvmrc to switch to 1.9.2
+	[4fe5bb5c6711]
+
+2011-02-05  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Merged with 144:0218912e346c
+	[3fa76479ac72]
+
+2011-01-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Fix the numwords spec
+	[d30d0ae6f3eb]
+
+2011-02-05  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Change the numbers spec to use the extension predicate
+	[b197d3f7c7dc]
+
+2011-01-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb, spec/linguistics/en_spec.rb:
+	Adding Linguistics::EN.has_extension? for feature-testing.
+	[c943b8e5e78b]
+
+2011-01-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/titlecase.rb,
+	spec/linguistics/en/titlecase_spec.rb:
+	Add specs (and fixed bugs they uncovered) for EN#to_camel_case and
+	EN#un_camel_case
+	[23061df53c5f]
+
+2011-01-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb:
+	Fix shadowed variables.
+	[c1fb915e7813]
+
+	* Manifest.txt:
+	Updated the release manifest
+	[c7f6fbf10d12]
+
+	* Manifest.txt:
+	Updating the manifest.
+	[79d632cc7cbe]
+
+	* Rakefile:
+	Update the Rakefile
+	[72057accf468]
+
+	* project.yml:
+	Removing old project file
+	[660f2ef1bd2b]
+
+2011-09-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgsigs:
+	Added signature for changeset 48267fd4b170
+	[12b48b6c4740] <fixes_for_1.0>
+
+	* ChangeLog, Rakefile, lib/linguistics.rb, lib/linguistics/en.rb,
+	project.yml:
+	Bugfix for Linguistics 1: Linguistics::EN.ordinate
+	[45b3311e6353] <fixes_for_1.0>
+
+2011-01-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/klingon.rb:
+	Better comments for the klingon example
+	[a324b320a51f] [github/redesign_for_2.0]
+
+	* README.md, examples/klingon.rb:
+	Updating the "how to add a language module" section of the README
+	[d48f6b9b9c4d]
+
+	* spec/linguistics/en_spec.rb, spec/linguistics/inflector_spec.rb,
+	spec/linguistics/iso639_spec.rb:
+	Adding some more test coverage
+	[8c779dd57160]
+
+	* lib/linguistics/en.rb:
+	Removed the explicit #language method, as it's now implemented in
+	the inflector
+	[c85a2f5a2323]
+
+	* lib/linguistics.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/iso639.rb:
+	Fixed a bug in inflector construction for languages with only a
+	3-character code
+	[72bbb09fea5a]
+
+	* lib/linguistics.rb, lib/linguistics/monkeypatches.rb,
+	spec/linguistics/monkeypatches_spec.rb:
+	Splitting out monkeypatches into a separate file
+	[706bfe3590f7]
+
+	* lib/linguistics/mixins.rb, spec/linguistics/mixins_spec.rb:
+	Removing unused mixin code
+	[a187612d1385]
+
+	* lib/linguistics/languagebehavior.rb:
+	Added a RSpec 2 shared behavior for testing language modules
+	[940d93685177]
+
+	* Rakefile:
+	Fixes for systems without the dev hoe plugins
+	[4d28fafe4564]
+
+	* lib/linguistics/en.rb, lib/linguistics/inflector.rb:
+	Fixing some API docs
+	[6924593b2a7b]
+
+2010-12-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/languagetags.tb:
+	Remove unused module
+	[470a4a2483c2]
+
+	* .hgignore, ChangeLog, README, README.english, Rakefile,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/infinitives.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/iso639.rb, tests/TEMPLATE.rb.tpl,
+	tests/en/infinitive.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/lafcadio.tests.rb, tests/en/linkparser.tests.rb,
+	tests/en/lprintf.tests.rb, tests/en/titlecase.tests.rb,
+	tests/en/wordnet.tests.rb, tests/lingtestcase.rb, utils.rb:
+	Merged in work from the 20_redesign branch
+	[96476467b140]
+
+	* Prepare feature branch for merging
+	[66d0f716f810] <20_redesign>
+
+	* History.md, Manifest.txt, README.md, README.textile, Rakefile,
+	Rakefile.local, tests/TEMPLATE.rb.tpl, tests/en/wordnet.tests.rb,
+	tests/lingtestcase.rb:
+	Converted to Hoe for build stuff, cleanup.
+	[8d3c36d88c00] <20_redesign>
+
+2010-12-15  Michael Granger  <ged@FaerieMUD.org>
+
+	* ChangeLog, Rakefile, lib/linguistics/en/wordnet.rb, project.yml,
+	spec/lib/helpers.rb, spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, tests/en/lprintf.tests.rb,
+	tests/en/titlecase.tests.rb, utils.rb:
+	Updated packaging, updated WordNet module, lprintf().
+	[d229cea7dc21] <20_redesign>
+
+2010-12-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb, lib/linguistics/en/articles.rb,
+	lib/linguistics/en/pluralization.rb, spec/linguistics/en_spec.rb,
+	tests/en/inflect.tests.rb, tests/en/linkparser.tests.rb:
+	Cleaned up and wrote initial specs for Linguistics::EN.lprintf and
+	related methods.
+	[7732c8042c91] <20_redesign>
+
+2010-12-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/lib/helpers.rb, spec/linguistics/en/participles_spec.rb:
+	Clean up spec helper, and fix participles spec.
+	[7d55210ecece] <20_redesign>
+
+2010-10-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb:
+	Removed stuff that's been moved out into addons.
+	[825169749f08] <20_redesign>
+
+	* lib/linguistics/en/titlecase.rb,
+	spec/linguistics/en/titlecase_spec.rb:
+	Split out titlecase addon
+	[807a0c6f11b3] <20_redesign>
+
+	* lib/linguistics/en/linkparser.rb,
+	spec/linguistics/en/linkparser_spec.rb:
+	Updated linkparser addon and added a rudimentary spec
+	[49c39e22abbc] <20_redesign>
+
+	* lib/linguistics/en/participles.rb,
+	spec/linguistics/en/participles_spec.rb:
+	Split out present participles
+	[59b3b444f3e2] <20_redesign>
+
+	* lib/linguistics/en/articles.rb,
+	spec/linguistics/en/articles_spec.rb:
+	Split out indefinite article functions
+	[29c807245ef0] <20_redesign>
+
+	* lib/linguistics/en/conjunctions.rb,
+	spec/linguistics/en/conjunctions_spec.rb:
+	Fixed conjunctions.
+	[5b9b21692df8] <20_redesign>
+
+2010-10-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.textile:
+	Updating README for the 2.0 branch
+	[9becaae21231] <20_redesign>
+
+	* .hgignore, .irbrc, README, README.english, README.textile, Rakefile,
+	examples/generalize_sentence.rb, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/infinitives.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/inflector.rb, lib/linguistics/iso639.rb,
+	lib/linguistics/mixins.rb, lib/linguistics/utils.rb, project.yml,
+	spec/lib/helpers.rb, spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitive_spec.rb,
+	spec/linguistics/en/infinitives_spec.rb,
+	spec/linguistics/en/numbers_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en_spec.rb, spec/linguistics/iso639_spec.rb,
+	spec/linguistics_spec.rb, tests/en/lprintf.tests.rb:
+	Checkpoint commit; got pluralization, numbers, and indefinite
+	articles working
+	[62bcee114ee2] <20_redesign>
+
+2010-03-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile.local, experiments/gen_numwords_specs.rb,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/conjunctions.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/iso639.rb, lib/linguistics/mixins.rb,
+	lib/linguistics/utils.rb, spec/lib/constants.rb,
+	spec/lib/helpers.rb, spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/numbers_spec.rb, spec/linguistics_spec.rb,
+	tests/en/infinitive.tests.rb, tests/en/lafcadio.tests.rb:
+	Checkpoint commit
+	[1a47a0c3b20e] <20_redesign>
+
+2009-11-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* LICENSE, README, Rakefile, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/iso639.rb,
+	project.yml, spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitive_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en_spec.rb, spec/linguistics/iso639_spec.rb,
+	spec/linguistics_spec.rb, tests/en/inflect.tests.rb:
+	Checkpoint commit
+	[7e0215e8393d] <20_redesign>
+
+2010-10-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics.rb:
+	Catch github master up to current version
+	[bce7c8390371]
+
+2009-12-17  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/iso639.rb, lib/linguistics/languagetags.tb:
+	Started work on a modern replacement for the old iso639 language
+	tags.
+	[9a88d4b05cde]
+
+2009-11-17  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 1.0.8 for changeset da353c888ad4
+	[c1dbba0aa071]
+
+	* .hgsigs:
+	Added signature for changeset 8029de2f9c60
+	[6d868ec5cb4a]
+
+	* Rakefile, lib/linguistics.rb:
+	Updated build system, bump version to 1.0.8.
+	[dbaa888d917d]
+
+	* lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/iso639.rb:
+	Fixes for 1.9.1 and license consistency update.
+	[1f790547308c]
+
+2009-11-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 1.0.7 for changeset 5f4fa2c136c7
+	[ceec0a668f35]
+
+	* .hgsigs:
+	Added signature for changeset bebbaa868974
+	[3cacefd5c621]
+
+	* .hgtags:
+	Removed tag 1.0.7
+	[5cf0c9805d7b]
+
+	* .hgignore, Rakefile:
+	Updated build system/gem; migrating to gemcutter.
+	[1a72526b35e3]
+
+	* .hgtags:
+	Added tag 1.0.7 for changeset 1e029bfd9ead
+	[b3ec1e58eb5c]
+
+	* .hgsigs:
+	Added signature for changeset 401a04c4cf43
+	[7685072ca4eb]
+
+	* lib/linguistics.rb:
+	Bumping version
+	[a7b962d3fea1]
+
+2009-08-15  Michael Granger  <ged@FaerieMUD.org>
+
+	* README, Rakefile, project.yml:
+	Updated build system
+	[ad39f916e1ac]
+
+2008-12-23  Michael Granger  <ged@FaerieMUD.org>
+
+	* LICENSE, Rakefile, lib/linguistics/en/wordnet.rb, project.yml:
+	* Updated build system.
+	 * Fixed copyright years in the LICENSE file
+	 * Cleanup of the wordnet integration source.
+	[de5b2668076b]
+
+2008-09-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* .cvsignore, .gemspec, Artistic, ChangeLog, LICENSE,
+	Linguistics.tmproj, MANIFEST, README, Rakefile, TODO,
+	docs/.cvsignore, docs/CATALOG, docs/makedocs.rb, install.rb,
+	lib/linguistics/en/wordnet.rb, makedist.rb, misc/rake/helpers.rb,
+	misc/rake/svn.rb, misc/rake/verifytask.rb, project.yml,
+	redist/crosscase.rb, test.rb, tests/en/infinitive.tests.rb,
+	utils.rb:
+	Converted to a new build system.
+	[3146f8325b6b]
+
+2008-01-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* Linguistics.tmproj, Rakefile, lib/linguistics.rb,
+	lib/linguistics/iso639.rb, misc/rake/helpers.rb, misc/rake/svn.rb,
+	misc/rake/verifytask.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics/iso639_spec.rb, spec/linguistics_spec.rb,
+	tests/en/conjunction.tests.rb, tests/use.tests.rb:
+	Started update of specs and build system
+	[80d9e3e992f2]
+
+2007-07-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/generalize_sentence.rb:
+	Adding examples directory
+	[6dbf241de80e]
+
+2007-06-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* .gemspec, .irbrc, ChangeLog, Linguistics.tmproj, README,
+	docs/makedocs.rb, install.rb, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/wordnet.rb, makedist.rb, test.rb,
+	tests/en/conjunction.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/lafcadio.tests.rb, tests/en/linkparser.tests.rb,
+	tests/en/lprintf.tests.rb, tests/en/titlecase.tests.rb,
+	tests/en/wordnet.tests.rb, tests/lingtestcase.rb,
+	tests/use.tests.rb, utils.rb:
+	Checkpoint commit
+	[42e9f1f93182]
+
+2006-07-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* docs/CATALOG:
+	* Updating docs/CATALOG with new CVS/server info
+	[ded0d54330b2]
+
+	* lib/linguistics/en.rb, tests/en/conjunction.tests.rb:
+	* Fix #conjunction with :penultimate => false for lists of three.
+	[5848ab100618]
+
+	* lib/linguistics/en.rb, tests/en/inflect.tests.rb:
+	* Fixed the ':and' setting in EN#numwords. Closes #8.
+	[af612577298b]
+
+2006-04-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* Linguistics.tmproj, experiments/conjunct-with-block.rb,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/wordnet.rb, tests/en/conjunction.tests.rb,
+	tests/en/inflect.tests.rb, utils.rb:
+	* Added optional block to #conjuction to allow inline conversion of
+	joined objects.
+	 * Added lprintf for injecting linguistics into formatted strings.
+	[ff558e233f88]
+
+2005-11-04  Michael Granger  <ged@FaerieMUD.org>
+
+	* experiments/api.rb, experiments/lprintf.rb:
+	* Updated api experiment so that it actually runs by commenting out
+	the leftover Perl stuff.
+	* Added lprintf() experiment.
+	[ac5fffe6e945]
+
+2005-10-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics.rb:
+	- Added autoloading of language constants.
+	[c66a6b9f665e]
+
+2005-10-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* docs/makedocs.rb, install.rb, makedist.rb, utils.rb:
+	- Updated to latest project-utils.
+	[eed9764be0e0]
+
+	* lib/linguistics/en.rb:
+	- Replaced 'hash.dup.update' with 'hash.merge'.
+	[c5d222b0c8af]
+
+2005-07-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* ChangeLog:
+	Updated changelog
+	[1d74e8e6e10c]
+
+2005-07-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* - Ignored html directory.
+	[da97dc77399f]
+
+	* docs/makedocs.rb, makedist.rb, utils.rb:
+	- Merged changes from project-utils.
+	[fd47f6963d46]
+
+	* .gemspec:
+	Initial checkin. Fixes #3.
+	[9cf0eb3130ee]
+
+	* experiments/api.rb:
+	- Set svn:keyword
+	[f9847dd70756]
+
+	* lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, redist/crosscase.rb,
+	redist/hashslice.rb, tests/en/lafcadio.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/titlecase.tests.rb,
+	tests/lingtestcase.rb, tests/use.tests.rb:
+	- Fixed up subversion constants
+	- Merged contributions from Francis Hwang <sera@fhwang.net>
+	(#camel_case_to_english, #english_to_camel_case, #proper_noun).
+	Closes #2
+	- Set svn:keyword
+	[fd6cab4f95c3]
+
+2013-09-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, .rvm.gems, .tm_properties, Gemfile, Rakefile:
+	Updating dependencies, adding Gemfile
+	[ae664c88ce95]
+
+2013-02-27  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.0.2 for changeset a516c984a9a1
+	[381415062e12]
+
+	* .hgsigs:
+	Added signature for changeset d2eeec0b7832
+	[a516c984a9a1] [v2.0.2]
+
+	* History.rdoc, lib/linguistics.rb:
+	Bump the patch version, update history.
+	[d2eeec0b7832]
+
+	* .rvmrc, lib/linguistics.rb:
+	Fix for Ruby 2: don't memoize the inflector.
+	[1b4ebdf345e6]
+
+2013-02-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v2.0.1 for changeset d8d00bf937f2
+	[a2394c2f784c]
+
+	* .hgsigs:
+	Added signature for changeset 5240c28c80bd
+	[d8d00bf937f2] [v2.0.1]
+
+	* History.rdoc, lib/linguistics.rb:
+	Bump patch version, update history.
+	[5240c28c80bd]
+
+2012-12-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile:
+	Add missing loggability dependency to the gem (fixes #3).
+	[49fe3002596e]
+
+2012-11-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/pluralization.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb:
+	Adding some monkeypatch specs (refs #1), fixing some edge-case
+	pluralizations.
+	[0b5177d918d9]
+
+2012-10-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* README.rdoc:
+	The inevitable post-release documentation fixes.
+	[f251780dff66]
+
+	* .hgtags:
+	Added tag v2.0.0 for changeset 1359338b7128
+	[d49d90d35935]
+
+	* .hgsigs:
+	Added signature for changeset a7cda4b8747c
+	[1359338b7128] [v2.0.0]
+
+	* History.rdoc, Manifest.txt, lib/linguistics.rb,
+	lib/linguistics/en/stemmer.rb, spec/lib/helpers.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/stemmer_spec.rb:
+	Prep for release.
+	[a7cda4b8747c]
+
+	* spec/linguistics/en/stemmer_spec.rb,
+	spec/linguistics/en/stemmer_spec.rb.rb:
+	Fix the name of the stemmer spec
+	[b554ff333b27]
+
+	* .rvm.gems, Rakefile, lib/linguistics/en/stemmer.rb,
+	spec/linguistics/en/stemmer_spec.rb.rb:
+	Adding support for Ruby-Stemmer
+	[5e5e6e77c366]
+
+	* lib/linguistics/en/wordnet.rb, spec/linguistics/en/wordnet_spec.rb:
+	Make wordnet re-use the error it raised when it was required if it
+	couldn't be loaded
+	[39f336798e9e]
+
+2012-10-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .rvm.gems, Rakefile, spec/lib/helpers.rb:
+	Add coverage task.
+	[3bb236bc49b3]
+
+2012-08-21  Michael Granger  <ged@FaerieMUD.org>
+
+	* Manifest.txt:
+	Fix the manifest
+	[cd25aa994e9a]
+
+	* .pryrc, lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/conjugation.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/mixins.rb, spec/linguistics/mixins_spec.rb,
+	spec/linguistics_spec.rb:
+	Loggability cleanup
+	[8b1c8ec50991]
+
+2012-08-20  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb, spec/lib/helpers.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Fix Linguistics::EN::WordNet.synsets.
+	[d9968c65d89c]
+
+	* Manifest.txt:
+	Add the en-language tester to the manifest
+	[be0e25789e59]
+
+2012-08-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/endocs.rb:
+	Added tester script for EN-module docs
+	[04340d1e66bd]
+
+	* .pryrc, README.rdoc, lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/articles.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitives.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/numbers.rb, lib/linguistics/en/participles.rb,
+	lib/linguistics/en/pluralization.rb,
+	lib/linguistics/en/titlecase.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/inflector.rb, lib/linguistics/iso639.rb,
+	spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/participles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/titlecase_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Documentation fixes, bugfixes
+	[8103736e8a86]
+
+2012-08-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb:
+	LinkParser spec fixes.
+	[6ed3a11ea12b]
+
+	* .rvm.gems, .tm_properties, Manifest.txt, README.rdoc, Rakefile,
+	lib/linguistics.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/utils.rb,
+	spec/lib/helpers.rb, spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/conjugation_spec.rb,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitives_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb,
+	spec/linguistics/en/numbers_spec.rb,
+	spec/linguistics/en/participles_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/titlecase_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics_spec.rb:
+	Prepping for 2.x release
+	[a01e8cf31ac3]
+
+	* History.rdoc, LICENSE, Manifest.txt, lib/linguistics/en.rb,
+	lib/linguistics/en/articles.rb, lib/linguistics/en/conjugation.rb,
+	lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitives.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/numbers.rb, lib/linguistics/en/participles.rb,
+	lib/linguistics/en/pluralization.rb,
+	lib/linguistics/en/titlecase.rb, lib/linguistics/en/wordnet.rb,
+	spec/linguistics/en/wordnet_spec.rb:
+	Prepping for release
+	[5d7f373a901f]
+
+2012-04-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* .pryrc, .rvm.gems, .rvmrc, History.md, History.rdoc, README.md,
+	README.rdoc, Rakefile:
+	Update build environment.
+	[677cc65003b4]
+
+2011-09-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag v1.0.9 for changeset 5e2a8b076d59
+	[2737987d5471] <fixes_for_1.0>
+
+	* .hgsigs:
+	Added signature for changeset 48267fd4b170
+	[5e2a8b076d59] [v1.0.9] <fixes_for_1.0>
+
+	* ChangeLog, Rakefile, lib/linguistics.rb, lib/linguistics/en.rb,
+	project.yml:
+	Bugfix for Linguistics 1: Linguistics::EN.ordinate
+	[48267fd4b170] <fixes_for_1.0>
+
+2011-08-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb, lib/linguistics/utils.rb:
+	Comment cleanup
+	[80e1b8080912]
+
+2011-07-12  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/conjugation.rb:
+	Removed the giant debugging log dump in favor of short diagnostics.
+	[6d1c9c82437d]
+
+	* Rakefile:
+	Updated linkparser dependency to the latest release
+	[1d2be604d02c]
+
+	* spec/linguistics/en/conjugation_spec.rb:
+	Turn off debugging output in the conjugation spec
+	[ac3dba55f167]
+
+	* README.md, lib/linguistics/en.rb, lib/linguistics/en/conjugation.rb,
+	spec/linguistics/en/conjugation_spec.rb:
+	Adding English verb conjugation via Robert Berry (bdigital)'s fork
+	on Github.
+	[ee0eb694852b]
+
+	* Rakefile, spec/lib/helpers.rb:
+	Updated for recent versions of RSpec.
+	[9fc5ac3506f8]
+
+2011-07-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, Rakefile:
+	De-YARD.
+	[967cb7c12329]
+
+2011-02-07  Michael Granger  <ged@FaerieMUD.org>
+
+	* Manifest.txt:
+	Reordering Manifest to make check_manifest work.
+	[e41a2fa5315e]
+
+	* .rvmrc:
+	Adding a project .rvmrc to switch to 1.9.2
+	[d4a5f1f59053]
+
+2011-02-05  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Merged with 144:0218912e346c
+	[077cc5f72d2e]
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Change the numbers spec to use the extension predicate
+	[cb2a12c6752c]
+
+2011-01-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/linguistics/en/numbers_spec.rb:
+	Fix the numwords spec
+	[0218912e346c]
+
+2011-01-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb, spec/linguistics/en_spec.rb:
+	Adding Linguistics::EN.has_extension? for feature-testing.
+	[d2266b5f6c73]
+
+2011-01-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/titlecase.rb,
+	spec/linguistics/en/titlecase_spec.rb:
+	Add specs (and fixed bugs they uncovered) for EN#to_camel_case and
+	EN#un_camel_case
+	[117e2904e95e]
+
+2011-01-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb:
+	Fix shadowed variables.
+	[7502d8cc69cf]
+
+	* Manifest.txt:
+	Updated the release manifest
+	[166e1d9a20dd]
+
+	* Manifest.txt:
+	Updating the manifest.
+	[12ebb23b545a]
+
+	* Rakefile:
+	Update the Rakefile
+	[63386a913414]
+
+	* project.yml:
+	Removing old project file
+	[880dfd357afb]
+
+2011-01-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/klingon.rb:
+	Better comments for the klingon example
+	[6ba52cffd4f6]
+
+	* README.md, examples/klingon.rb:
+	Updating the "how to add a language module" section of the README
+	[bd49f872dcef]
+
+	* spec/linguistics/en_spec.rb, spec/linguistics/inflector_spec.rb,
+	spec/linguistics/iso639_spec.rb:
+	Adding some more test coverage
+	[6993866cb5a5]
+
+	* lib/linguistics/en.rb:
+	Removed the explicit #language method, as it's now implemented in
+	the inflector
+	[a6e22bd4d5c4]
+
+	* lib/linguistics.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/iso639.rb:
+	Fixed a bug in inflector construction for languages with only a
+	3-character code
+	[81360f6cb3f1]
+
+	* lib/linguistics.rb, lib/linguistics/monkeypatches.rb,
+	spec/linguistics/monkeypatches_spec.rb:
+	Splitting out monkeypatches into a separate file
+	[df32ab4ec78f]
+
+	* lib/linguistics/mixins.rb, spec/linguistics/mixins_spec.rb:
+	Removing unused mixin code
+	[eb91956633ba]
+
+	* lib/linguistics/languagebehavior.rb:
+	Added a RSpec 2 shared behavior for testing language modules
+	[77ff43777256]
+
+	* Rakefile:
+	Fixes for systems without the dev hoe plugins
+	[c740766cfc01]
+
+	* lib/linguistics/en.rb, lib/linguistics/inflector.rb:
+	Fixing some API docs
+	[4cfcdca46d1a]
+
+2010-12-16  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/languagetags.tb:
+	Remove unused module
+	[d648b470243c]
+
+	* .hgignore, ChangeLog, README, README.english, Rakefile,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/infinitives.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/iso639.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics_spec.rb, tests/TEMPLATE.rb.tpl,
+	tests/en/infinitive.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/lafcadio.tests.rb, tests/en/linkparser.tests.rb,
+	tests/en/lprintf.tests.rb, tests/en/titlecase.tests.rb,
+	tests/en/wordnet.tests.rb, tests/lingtestcase.rb, utils.rb:
+	Merged in work from the 20_redesign branch
+	[29f18e9ec72b]
+
+	* Prepare feature branch for merging
+	[7bab3eac65e1] <20_redesign>
+
+	* History.md, Manifest.txt, README.md, README.textile, Rakefile,
+	Rakefile.local, tests/TEMPLATE.rb.tpl, tests/en/wordnet.tests.rb,
+	tests/lingtestcase.rb:
+	Converted to Hoe for build stuff, cleanup.
+	[1ddb089668a6] <20_redesign>
+
+2010-12-15  Michael Granger  <ged@FaerieMUD.org>
+
+	* ChangeLog, Rakefile, lib/linguistics/en/wordnet.rb, project.yml,
+	spec/lib/helpers.rb, spec/linguistics/en/articles_spec.rb,
+	spec/linguistics/en/linkparser_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en/wordnet_spec.rb, tests/en/lprintf.tests.rb,
+	tests/en/titlecase.tests.rb, utils.rb:
+	Updated packaging, updated WordNet module, lprintf().
+	[a5c25f0f1458] <20_redesign>
+
+2010-12-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb, lib/linguistics/en/articles.rb,
+	lib/linguistics/en/pluralization.rb, spec/linguistics/en_spec.rb,
+	tests/en/inflect.tests.rb, tests/en/linkparser.tests.rb:
+	Cleaned up and wrote initial specs for Linguistics::EN.lprintf and
+	related methods.
+	[b31562e6d34c] <20_redesign>
+
+2010-12-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* spec/lib/helpers.rb, spec/linguistics/en/participles_spec.rb:
+	Clean up spec helper, and fix participles spec.
+	[33d03eab7092] <20_redesign>
+
+2010-10-19  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb:
+	Removed stuff that's been moved out into addons.
+	[80451a09a77c] <20_redesign>
+
+	* lib/linguistics/en/titlecase.rb,
+	spec/linguistics/en/titlecase_spec.rb:
+	Split out titlecase addon
+	[302486502d36] <20_redesign>
+
+	* lib/linguistics/en/linkparser.rb,
+	spec/linguistics/en/linkparser_spec.rb:
+	Updated linkparser addon and added a rudimentary spec
+	[d68037e0be3d] <20_redesign>
+
+	* lib/linguistics/en/participles.rb,
+	spec/linguistics/en/participles_spec.rb:
+	Split out present participles
+	[f79a44c612e4] <20_redesign>
+
+	* lib/linguistics/en/articles.rb,
+	spec/linguistics/en/articles_spec.rb:
+	Split out indefinite article functions
+	[e6ca28d45eb1] <20_redesign>
+
+	* lib/linguistics/en/conjunctions.rb,
+	spec/linguistics/en/conjunctions_spec.rb:
+	Fixed conjunctions.
+	[5b7d00ffe607] <20_redesign>
+
+2010-10-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics_spec.rb:
+	Catch github master up to current version
+	[a2fa99d19aeb]
+
+	* README.textile, tests/en/inflect.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/titlecase.tests.rb,
+	tests/en/wordnet.tests.rb, tests/lingtestcase.rb:
+	Updating README for the 2.0 branch
+	[b58ab2bda74a] <20_redesign>
+
+2009-08-15  Michael Granger  <ged@FaerieMUD.org>
+
+	* README, Rakefile, project.yml:
+	Updated build system
+	[90d4b94647c1]
+
+2008-12-23  Michael Granger  <ged@FaerieMUD.org>
+
+	* LICENSE, Rakefile, lib/linguistics/en/wordnet.rb, project.yml:
+	* Updated build system.
+	 * Fixed copyright years in the LICENSE file
+	 * Cleanup of the wordnet integration source.
+	[4df4ff96ffcd]
+
+2008-09-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* .cvsignore, .gemspec, Artistic, ChangeLog, LICENSE,
+	Linguistics.tmproj, MANIFEST, README, Rakefile, TODO,
+	docs/.cvsignore, docs/CATALOG, docs/makedocs.rb, install.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/infinitive.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/wordnet.rb,
+	makedist.rb, misc/rake/helpers.rb, misc/rake/svn.rb,
+	misc/rake/verifytask.rb, project.yml, redist/crosscase.rb, test.rb,
+	tests/en/infinitive.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/wordnet.tests.rb, utils.rb:
+	Converted to a new build system.
+	[c14698509a9c]
+
+2008-01-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* Linguistics.tmproj, Rakefile, lib/linguistics.rb,
+	lib/linguistics/iso639.rb, misc/rake/helpers.rb, misc/rake/svn.rb,
+	misc/rake/verifytask.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics/iso639_spec.rb, spec/linguistics_spec.rb,
+	tests/en/conjunction.tests.rb, tests/use.tests.rb:
+	Started update of specs and build system
+	[079785674777]
+
+2010-10-18  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgignore, .irbrc, README, README.english, README.textile, Rakefile,
+	examples/generalize_sentence.rb, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/infinitives.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/inflector.rb, lib/linguistics/iso639.rb,
+	lib/linguistics/mixins.rb, lib/linguistics/utils.rb, project.yml,
+	spec/lib/helpers.rb, spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitive_spec.rb,
+	spec/linguistics/en/infinitives_spec.rb,
+	spec/linguistics/en/numbers_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en_spec.rb, spec/linguistics/iso639_spec.rb,
+	spec/linguistics_spec.rb, tests/en/lprintf.tests.rb:
+	Checkpoint commit; got pluralization, numbers, and indefinite
+	articles working
+	[2732414c5fa0] <20_redesign>
+
+2010-03-01  Michael Granger  <ged@FaerieMUD.org>
+
+	* Rakefile.local, experiments/gen_numwords_specs.rb,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/conjunctions.rb, lib/linguistics/en/numbers.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/inflector.rb,
+	lib/linguistics/iso639.rb, lib/linguistics/mixins.rb,
+	lib/linguistics/utils.rb, spec/lib/constants.rb,
+	spec/lib/helpers.rb, spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/numbers_spec.rb, spec/linguistics_spec.rb,
+	tests/en/infinitive.tests.rb, tests/en/lafcadio.tests.rb:
+	Checkpoint commit
+	[485369a7d3ac] <20_redesign>
+
+2009-12-17  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/iso639.rb, lib/linguistics/languagetags.tb:
+	Started work on a modern replacement for the old iso639 language
+	tags.
+	[8bd6ee08ffb1]
+
+2009-11-17  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 1.0.8 for changeset da353c888ad4
+	[dad041cf748b]
+
+	* .hgsigs:
+	Added signature for changeset 8029de2f9c60
+	[da353c888ad4] [1.0.8]
+
+	* Rakefile, lib/linguistics.rb:
+	Updated build system, bump version to 1.0.8.
+	[8029de2f9c60]
+
+	* lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/wordnet.rb, lib/linguistics/iso639.rb:
+	Fixes for 1.9.1 and license consistency update.
+	[2640c845eb5c]
+
+2009-11-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* .hgtags:
+	Added tag 1.0.7 for changeset 5f4fa2c136c7
+	[5608e79a8c0e]
+
+	* .hgsigs:
+	Added signature for changeset bebbaa868974
+	[5f4fa2c136c7] [1.0.7]
+
+	* .hgtags:
+	Removed tag 1.0.7
+	[bebbaa868974]
+
+	* .hgignore, Rakefile:
+	Updated build system/gem; migrating to gemcutter.
+	[745ab2865e60]
+
+	* .hgtags:
+	Added tag 1.0.7 for changeset 1e029bfd9ead
+	[768322417359]
+
+	* .hgsigs:
+	Added signature for changeset 401a04c4cf43
+	[1e029bfd9ead]
+
+	* lib/linguistics.rb:
+	Bumping version
+	[401a04c4cf43]
+
+	* LICENSE, README, Rakefile, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/conjunctions.rb,
+	lib/linguistics/en/infinitive.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/pluralization.rb, lib/linguistics/en/wordnet.rb,
+	lib/linguistics/iso639.rb, project.yml,
+	spec/linguistics/en/conjunctions_spec.rb,
+	spec/linguistics/en/infinitive_spec.rb,
+	spec/linguistics/en/pluralization_spec.rb,
+	spec/linguistics/en_spec.rb, spec/linguistics/iso639_spec.rb,
+	spec/linguistics_spec.rb, tests/en/infinitive.tests.rb,
+	tests/en/inflect.tests.rb, tests/en/lafcadio.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/lprintf.tests.rb,
+	tests/en/titlecase.tests.rb, tests/en/wordnet.tests.rb,
+	tests/lingtestcase.rb:
+	Checkpoint commit
+	[95790e776f43] <20_redesign>
+
+2009-08-15  Michael Granger  <ged@FaerieMUD.org>
+
+	* README, Rakefile, project.yml:
+	Updated build system
+	[405a85e00d33]
+
+2008-12-23  Michael Granger  <ged@FaerieMUD.org>
+
+	* LICENSE, Rakefile, lib/linguistics/en/wordnet.rb, project.yml:
+	* Updated build system.
+	 * Fixed copyright years in the LICENSE file
+	 * Cleanup of the wordnet integration source.
+	[10f0010d38f7]
+
+2008-09-06  Michael Granger  <ged@FaerieMUD.org>
+
+	* .cvsignore, .gemspec, Artistic, ChangeLog, LICENSE,
+	Linguistics.tmproj, MANIFEST, README, Rakefile, TODO,
+	docs/.cvsignore, docs/CATALOG, docs/makedocs.rb, install.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/infinitive.rb,
+	lib/linguistics/en/linkparser.rb, lib/linguistics/en/wordnet.rb,
+	makedist.rb, misc/rake/helpers.rb, misc/rake/svn.rb,
+	misc/rake/verifytask.rb, project.yml, redist/crosscase.rb, test.rb,
+	tests/en/infinitive.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/wordnet.tests.rb, utils.rb:
+	Converted to a new build system.
+	[21e0fa69b1a3]
+
+2008-01-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* Linguistics.tmproj, Rakefile, lib/linguistics.rb,
+	lib/linguistics/iso639.rb, misc/rake/helpers.rb, misc/rake/svn.rb,
+	misc/rake/verifytask.rb, spec/linguistics/en_spec.rb,
+	spec/linguistics/iso639_spec.rb, spec/linguistics_spec.rb,
+	tests/en/conjunction.tests.rb, tests/use.tests.rb:
+	Started update of specs and build system
+	[31309a47cd51]
+
+2007-07-25  Michael Granger  <ged@FaerieMUD.org>
+
+	* examples/generalize_sentence.rb:
+	Adding examples directory
+	[25721aae944c]
+
+2007-06-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* .gemspec, .irbrc, ChangeLog, Linguistics.tmproj, README,
+	docs/makedocs.rb, install.rb, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/en/linkparser.rb,
+	lib/linguistics/en/wordnet.rb, makedist.rb, test.rb,
+	tests/en/conjunction.tests.rb, tests/en/inflect.tests.rb,
+	tests/en/lafcadio.tests.rb, tests/en/linkparser.tests.rb,
+	tests/en/lprintf.tests.rb, tests/en/titlecase.tests.rb,
+	tests/en/wordnet.tests.rb, tests/lingtestcase.rb,
+	tests/use.tests.rb, utils.rb:
+	Checkpoint commit
+	[221d313ccdd5]
+
+2006-07-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* docs/CATALOG:
+	* Updating docs/CATALOG with new CVS/server info
+	[4e41be395a2f]
+
+	* lib/linguistics/en.rb, tests/en/conjunction.tests.rb:
+	* Fix #conjunction with :penultimate => false for lists of three.
+	[53aa0aa41c17]
+
+	* lib/linguistics/en.rb, tests/en/inflect.tests.rb:
+	* Fixed the ':and' setting in EN#numwords. Closes #8.
+	[2082fa705aed]
+
+2006-04-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* Linguistics.tmproj, experiments/conjunct-with-block.rb,
+	lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/wordnet.rb, tests/en/conjunction.tests.rb,
+	tests/en/inflect.tests.rb, utils.rb:
+	* Added optional block to #conjuction to allow inline conversion of
+	joined objects.
+	 * Added lprintf for injecting linguistics into formatted strings.
+	[baf5b4b35b56]
+
+2005-11-04  Michael Granger  <ged@FaerieMUD.org>
+
+	* experiments/api.rb, experiments/lprintf.rb:
+	* Updated api experiment so that it actually runs by commenting out
+	the leftover Perl stuff.
+	* Added lprintf() experiment.
+	[4e3d732b608d]
+
+2005-10-30  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics.rb:
+	- Added autoloading of language constants.
+	[733a1fe188d9]
+
+2005-10-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* docs/makedocs.rb, install.rb, makedist.rb, utils.rb:
+	- Updated to latest project-utils.
+	[2d110ae82da4]
+
+	* lib/linguistics/en.rb:
+	- Replaced 'hash.dup.update' with 'hash.merge'.
+	[6b3f1ba74aef]
+
+2005-07-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* ChangeLog:
+	Updated changelog
+	[7f7a1183b57d]
+
+2005-07-13  Michael Granger  <ged@FaerieMUD.org>
+
+	* - Ignored html directory.
+	[54788ab9bcf8]
+
+	* docs/makedocs.rb, makedist.rb, utils.rb:
+	- Merged changes from project-utils.
+	[b5d49e0c35ca]
+
+	* .gemspec:
+	Initial checkin. Fixes #3.
+	[31560ff75fd3]
+
+	* experiments/api.rb:
+	- Set svn:keyword
+	[37d8a6c881ee]
+
+	* lib/linguistics.rb, lib/linguistics/en.rb,
+	lib/linguistics/en/infinitive.rb, redist/crosscase.rb,
+	redist/hashslice.rb, tests/en/lafcadio.tests.rb,
+	tests/en/linkparser.tests.rb, tests/en/titlecase.tests.rb,
+	tests/lingtestcase.rb, tests/use.tests.rb:
+	- Fixed up subversion constants
+	- Merged contributions from Francis Hwang <sera@fhwang.net>
+	(#camel_case_to_english, #english_to_camel_case, #proper_noun).
+	Closes #2
+	- Set svn:keyword
+	[a63acb00f644]
+
+	* lib/linguistics.rb:
+	- Added Subversion constants
+	- Cleaned up comments for language proxy class.
+	[63e8c69d1907]
+
+	* experiments/lafcadio_plural.rb:
+	Initial checkin.
+	[238673eaaee4]
+
+	* experiments/TEMPLATE.rb.tpl:
+	Initial checkin.
+	[f6514ebec6a5]
+
+2004-05-08  Michael Granger  <ged@FaerieMUD.org>
+
+	* install.rb:
+	- Added compatibility with Aoki-san's install.rb. Kind of.
+	[ee9fdfc4c36c]
+
+	* lib/linguistics/en/linkparser.rb:
+	- Bugfix: Linkparser should start out missing by default.
+	[158cf095a9fa]
+
+	* test.rb:
+	- Fixed to work even if it's not in the cwd. Thanks to batsman on
+	irc://irc.freenode.net/#ruby-lang for reporting this.
+	[474e184fe6ff]
+
+2003-10-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .cvsignore:
+	Initial checkin.
+	[8a0b2a4b886e]
+
+	* install.rb:
+	- Updated requirements list
+
+	- Removed unnecessary readline require
+	[845e03b13966]
+
+	* README:
+	- Fixed requirements/optional libraries (Thanks to Yuri Leikind
+	<y.leikind@sam-solutions.net> for bringing this to my attention).
+	[4666486a50eb]
+
+	* MANIFEST:
+	- Wildcarded everything under lib/ so new additions don't have to be
+	explicitly listed.
+
+	- Added README.english (Thanks to Yuri Leikind <y.leikind@sam-
+	solutions.net> for bringing this to my attention).
+	[214171390c1e]
+
+2003-09-14  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en/wordnet.rb:
+	- Calls to #synset no longer trap parse errors. This was done for
+	two reasons:
+
+	 1. If the WordNet doesn't load, WordNet::ParseError is an undefined
+	constant, so the function fails with a semi-ambiguous error message.
+
+	 2. The user of the library might wish to handle the parse failure
+	herself.
+	[f5db1fb97033]
+
+	* test.rb:
+	- Added redist/ to $LOAD_PATH.
+	[02ca82bc6984]
+
+	* lib/linguistics/en/wordnet.rb:
+	- Added synopsis of use to the comment header.
+
+	- Added reminder to finish documenting the auto-generated code.
+	[4db8df9973b4]
+
+	* lib/linguistics/en/linkparser.rb:
+	- Added synopsis of use to the comment header.
+	[6bad66b91135]
+
+	* docs/CATALOG:
+	- Added README.english
+	[634ce53493be]
+
+	* README.english:
+	- Fixed screwed-up code resulting from broken paste.
+	[fb47d6b0ded6]
+
+	* README:
+	- Added mention of README.english.
+	[7146ca3eebfc]
+
+	* lib/linguistics/en.rb:
+	- Removed redundant mention of the WordNet module from the comment
+	header.
+	[9881c8ad3958]
+
+	* lib/linguistics/en/linkparser.rb:
+	- Fixed the comment header some more.
+	[7aaa4bd062f6]
+
+	* install.rb:
+	- Now installs the stuff in redist/ too.
+	[5eac6f24970e]
+
+	* MANIFEST:
+	- Changed pattern for the redist directory to catch any .rb files.
+	[1ca51228553c]
+
+	* lib/linguistics/en/infinitive.rb:
+	- Fixed names of constants to reduce the chances of collision.
+	[a790dfd55178]
+
+	* redist/crosscase.rb:
+	Initial checkin from version 0.01 of CrossCase.
+	[e9b089d13462]
+
+	* tests/en/linkparser.tests.rb:
+	- Changed parsing of non-sentences to expect errors in accordance
+	with changes to the API of the LinkParser integration.
+	[87fad66155c9]
+
+	* lib/linguistics/en.rb:
+	- Added CrossCase require/include to provide under_barred aliasing
+	for camelCase functions.
+	[2c428d7f5cf8]
+
+	* README:
+	- Added Martin to the Authors list.
+
+	- Updated optional list.
+	[ea35375458c6]
+
+	* README.english:
+	Initial checkin.
+	[30d897f7238c]
+
+	* lib/linguistics/en/linkparser.rb:
+	- Touched up the file description a bit.
+
+	- @lpError now intitialized: bug spotted by Martin Chase.
+
+	- Calls to #linkParse no longer trap parse errors. This was done for
+	two reasons:
+
+	 1. If the LinkParser module doesn't load, LinkParser::ParseError is
+	an undefined constant, so the function fails with a semi- ambiguous
+	error message.
+
+	 2. The user of the library might wish to handle the parse failure
+	herself.
+	[e305e6d5c5f6]
+
+2003-09-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* ChangeLog:
+	Checkpoint commit
+	[9c2ff236f6b1]
+
+	* tests/en/inflect.tests.rb:
+	- Added test for functional interface to auto-generated code.
+
+	- Removed tests of the 'use' function into their own test case.
+	[c67f784e7948]
+
+	* tests/en/conjunction.tests.rb:
+	- Added test for functional interface to auto-generated code.
+	[4d6e8b90bcb0]
+
+	* lib/linguistics/en/wordnet.rb, tests/en/infinitive.tests.rb:
+	Initial checkin.
+	[6f71252ff658]
+
+	* tests/use.tests.rb:
+	- Fixed require block at the top.
+
+	- Changed name of intermediate class to reflect change in
+	linguistics.rb.
+
+	- Fixed 1.8 complaint.
+	[8eb3e2977dd5]
+
+	* tests/lingtestcase.rb:
+	- Added a dummy test so if the tests for optional modules can't be
+	run (because the modules on which they depend aren't installed), it
+	doesn't count as a failure because there were no tests.
+	[75be1895f357]
+
+	* tests/TEMPLATE.rb.tpl:
+	- Fixed leftover comment from copy.
+	[743382c087e6]
+
+	* lib/linguistics/iso639.rb:
+	- Fixed typo.
+	[23790f38a0cb]
+
+	* lib/linguistics/en.rb:
+	- Removed some more code for the aborted attempt to make the module
+	1.6-compatible.
+
+	- Added requires for new extensions 'wordnet', 'linkparser', and
+	'infinitive'.
+
+	- Updated docs in the header, though they're not yet ready for
+	release.
+	[9a7bed5457b2]
+
+	* lib/linguistics.rb:
+	- Changed name of "inflector" class to "languageProxy" to better fit
+	what it does.
+
+	- Added support for transparent delegator proxy methods.
+
+	- Added support for MyClass::extend( Linguistics ) and class
+	MyClass; include Linguistics; end.
+
+	- Modified code in #loadLanguage to minimize the number of requires.
+	[579fb11da29c]
+
+	* .irbrc:
+	- Added :installProxy config to the #use call.
+	[5d62e88eabf3]
+
+	* experiments/generalize.rb, experiments/wn-proglang.rb:
+	Initial checkin.
+	[28370746e077]
+
+	* experiments/allobjlist.rb:
+	- Added example output.
+	[e75da92bfb98]
+
+	* docs/makedocs.rb:
+	- Reworked to be more generically useful, and support parsing of
+	options from CATALOG file.
+	[d2ff7131481d]
+
+	* docs/CATALOG:
+	- Added rdoc-option header.
+	[a7edb22b3097]
+
+	* utils.rb:
+	- Brought up-to-date with canonical source.
+	[ca2dcef4471a]
+
+	* TODO:
+	- Removed finished items.
+	[5d7d40c0bf22]
+
+	* README:
+	- Beginnings of update for new release. Still needs more work before
+	release.
+	[865273ac947c]
+
+	* MANIFEST:
+	- Added ChangeLog.
+	[0c1335f96c40]
+
+	* lib/linguistics/en/infinitive.rb, lib/linguistics/en/linkparser.rb:
+	Initial checkin.
+	[0d4f3e0f6b33]
+
+2003-09-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* tests/en/wordnet.tests.rb:
+	Initial checkin.
+	[74aa7e9f9ba8]
+
+2003-09-09  Martin Chase  <stillflame@FaerieMUD.org>
+
+	* tests/en/linkparser.tests.rb:
+	initial import
+	[ae845807a0f4]
+
+2003-08-26  Michael Granger  <ged@FaerieMUD.org>
+
+	* docs/.cvsignore:
+	Initial checkin.
+	[f2ddd83efeef]
+
+2003-07-11  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb:
+	- Added a Range#step 1.6 compat function.
+	[724036a529a6]
+
+	* tests/use.tests.rb:
+	- 1.6 fixes.
+	[32814ce3597d]
+
+	* lib/linguistics.rb:
+	- More 1.6ish fixes.
+	[9b7ee80b50ee]
+
+2003-07-10  Michael Granger  <ged@FaerieMUD.org>
+
+	* lib/linguistics/en.rb:
+	Made module_methods out of the backend functions to support
+	including linguistic methods again.
+	[a3f5d11906de]
+
+	* lib/linguistics.rb:
+	- Fixed use of Hash#merge! (1.8 feature)
+	[7a7f05b223f7]
+
+	* lib/linguistics/en.rb:
+	- Fixed usage of Hash#merge (a 1.8 feature).
+	[40457b3c1a48]
+
+	* tests/lingtestcase.rb:
+	- Removed unneccessary require of test/unit/mock.
+	[d11ee5810b08]
+
+2003-07-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* MANIFEST:
+	Initial checkin.
+	[9c32a7e30cb0]
+
+	* install.rb:
+	Initial checkin.
+	[38aded3c6801]
+
+	* docs/CATALOG:
+	- Explicitly listed linguistics.rb so it gets documented first.
+	[76747915b8c5]
+
+	* utils.rb:
+	- Commented out rdoc-selection code, as it doesn't work.
+	[fcb245968c83]
+
+	* README:
+	- Fleshed out instructions for use and addition.
+	[64c33b94c128]
+
+	* Artistic, lib/linguistics.rb, tests/use.tests.rb:
+	- RDoc fixes
+	[07bd25eaf347]
+
+	* lib/linguistics/iso639.rb:
+	- Made some RDoc fixes
+	[943c544612cd]
+
+	* lib/linguistics.rb:
+	- Added array-wrapping to allow single classes in the :classes
+	config argument.
+
+	- Wrapped the code that adds the inflector method in a test for the
+	method's existance to avoid constantly redefining it for classes
+	which already have it.
+	[509a93564b58]
+
+	* lib/linguistics/en.rb:
+	- Moved Array extension to the bottom of the file to avoid
+	confusion, and turned on :nodoc: for it.
+	[76b35a68af3e]
+
+	* tests/conjunction.tests.rb, tests/en_inflect.tests.rb:
+	- Moved into the en/ directory to separate language-specific tests
+	from general tests.
+	[3e099b6e65ab]
+
+	* makedist.rb:
+	Fixed project-grokking expression
+	[86d7a993f44f]
+
+	* docs/makedocs.rb:
+	Initial checkin.
+	[2832244cb478]
+
+	* experiments/allobjlist.rb, experiments/farmobjs.rb:
+	Initial checkin
+	[12cb5587127a]
+
+2003-07-09  unknown  <unknown>
+
+	* This commit was manufactured by cvs2svn to create branch
+	'FAERIEMUD_CONSORTIUM'.
+	[b969bf3cdcb7] <FAERIEMUD_CONSORTIUM>
+
+2003-07-09  Michael Granger  <ged@FaerieMUD.org>
+
+	* .irbrc, Artistic, README, TODO, docs/CATALOG, experiments/api.rb,
+	experiments/randobjlist.rb, lib/linguistics.rb,
+	lib/linguistics/en.rb, lib/linguistics/iso639.rb, makedist.rb,
+	redist/hashslice.rb, test.rb, tests/TEMPLATE.rb.tpl,
+	tests/conjunction.tests.rb, tests/en/conjunction.tests.rb,
+	tests/en/inflect.tests.rb, tests/en_inflect.tests.rb,
+	tests/lingtestcase.rb, tests/use.tests.rb, utils.rb:
+	Initial revision
+	[6c6bdac4c291]

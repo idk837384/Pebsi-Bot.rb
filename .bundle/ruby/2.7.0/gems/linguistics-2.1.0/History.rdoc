@@ -1,0 +1,43 @@
+== v2.1.0 [2015-09-16] Michael Granger <ged@FaerieMUD.org>
+
+- Add an `article` config item to English conjunctions.
+
+
+== v2.0.4 [2015-03-12] Michael Granger <ged@FaerieMUD.org>
+
+Updates and bugfixes for Ruby 2.2.
+
+
+== v2.0.3 [2013-12-02] Michael Granger <ged@FaerieMUD.org>
+
+A bunch of fixes from Ippei UKAI <ippei_ukai@mac.com>
+
+- fix past tense for words end with y
+- fix past tense for doubling verbs
+- fix present participle conjugation of verbs that end with 'e'
+
+
+== v2.0.2 [2013-02-27] Michael Granger <ged@FaerieMUD.org>
+
+- Fix for Ruby 2: don't memoize the inflector.
+
+
+== v2.0.1 [2013-02-25] Michael Granger <ged@FaerieMUD.org>
+
+- Add missing loggability dependency to the gem (fixes #3).
+- Adding some monkeypatch specs (refs #1), fixing some edge-case
+  pluralizations.
+- Documentation fixes.
+
+
+== v2.0.0 [2012-10-10] Michael Granger  <ged@FaerieMUD.org>
+
+Rewritten to be more modular, easier to extend and maintain, and to work under
+1.9.
+
+
+=== v1.0.9 [2011-09-01] Michael Granger  <ged@FaerieMUD.org>
+
+- Bugfix for Linguistics::EN.ordinate.
+
+

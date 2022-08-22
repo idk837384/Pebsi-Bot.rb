@@ -1,0 +1,45 @@
+crypto_box/libsodium_la-crypto_box.lo: crypto_box/crypto_box.c \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdc-predef.h \
+ include/sodium/crypto_box.h \
+ /nix/store/dlni53myj53kx20pi4yhm7p68lw17b07-gcc-10.3.0/lib/gcc/x86_64-unknown-linux-gnu/10.3.0/include/stddef.h \
+ include/sodium/crypto_box_curve25519xsalsa20poly1305.h \
+ include/sodium/crypto_stream_xsalsa20.h \
+ /nix/store/dlni53myj53kx20pi4yhm7p68lw17b07-gcc-10.3.0/lib/gcc/x86_64-unknown-linux-gnu/10.3.0/include/stdint.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdint.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/libc-header-start.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/features.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/sys/cdefs.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/wordsize.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/long-double.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/gnu/stubs.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/gnu/stubs-64.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/types.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/timesize.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/typesizes.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/time64.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/wchar.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/stdint-intn.h \
+ /nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/stdint-uintn.h \
+ include/sodium/export.h
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdc-predef.h:
+include/sodium/crypto_box.h:
+/nix/store/dlni53myj53kx20pi4yhm7p68lw17b07-gcc-10.3.0/lib/gcc/x86_64-unknown-linux-gnu/10.3.0/include/stddef.h:
+include/sodium/crypto_box_curve25519xsalsa20poly1305.h:
+include/sodium/crypto_stream_xsalsa20.h:
+/nix/store/dlni53myj53kx20pi4yhm7p68lw17b07-gcc-10.3.0/lib/gcc/x86_64-unknown-linux-gnu/10.3.0/include/stdint.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/stdint.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/libc-header-start.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/features.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/sys/cdefs.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/wordsize.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/long-double.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/gnu/stubs.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/gnu/stubs-64.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/types.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/timesize.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/typesizes.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/time64.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/wchar.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/stdint-intn.h:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/bits/stdint-uintn.h:
+include/sodium/export.h:
