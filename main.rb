@@ -1,11 +1,17 @@
 require 'discordrb'
-require 'linguistics'
 require 'yaml'
 load 'keepalive.rb'
 token = ENV["tocke"] #replace ENV["tocke"] with whatever your bot token is, inside of ""
 bot = Discordrb::Bot.new token: token
 
 @logs=[]
+
+#different units of time in seconds
+@minute=60
+@hour=3600
+@day=86400
+@week=604800
+
 
 bot.ready() { |msg|
     bot.playing=('Pe:help')
@@ -39,17 +45,18 @@ bot.message(from: not!([''])) { |msg|
         #}
     end
     
-    if msg.text.downcase.split(' ')[0] == 'pe:ymladd'
+    if msg.text.downcase.split(' ')[0] == 'pe:tagcreate'
         test=YAML.load(File.open("test.yml"))
         puts test
-        msg.respond 'New YML Key added!'
+        msg.respond 'New tag created with the name ' + msg.text.downcase.split(' ')[1] + ' and the value ' + msg.text.downcase.split(' ')[2] + '!'
         data = test
         data[msg.text.downcase.split(' ')[1]]=msg.text.downcase.split(' ')[2]
         File.open("test.yml", "w") {|f| f.write(data.to_yaml)}
     end
-    if msg.text.downcase.split(' ')[0] == 'pe:ymlall'
+    if msg.text.downcase.split(' ')[0] == 'pe:tagall'
         test=YAML.load(File.open("test.yml"))
-        mes=''
+        mes='*All Tags:*
+'
         test.compact!
         test.each do |a,b|
             mes<<a
@@ -58,7 +65,7 @@ bot.message(from: not!([''])) { |msg|
         end
         msg.respond mes
     end
-    if msg.text.downcase.split(' ')[0] == 'pe:ymlfind'
+    if msg.text.downcase.split(' ')[0] == 'pe:tagsearch'
         test=YAML.load(File.open("test.yml"))
         @tFou=''
         test.each { |x, y| 
@@ -72,7 +79,7 @@ bot.message(from: not!([''])) { |msg|
         if @tFou==true
             msg.respond @res.to_s
         else
-            msg.respond 'Unable to find .YML key! Maybe try adding it?'
+            msg.respond 'Unable to find tag by the name ' + msg.text.downcase.split(' ')[1] +'! Maybe try creating it?'
         end
         
     end
@@ -106,13 +113,13 @@ bot.message(from: not!([''])) { |msg|
     end
 
     if msg.text.downcase == 'pe:help'
-        msg.respond ">>> **Pebsi Command List:**
-        *<@1003128494156435536> opinion on [insert text here]*: Pebsi will state its opinion on your given text.
-        *pe:roll [insert number].[insert number]*: Pebsi will give you a random number between the 2 provided integers.
+        msg.respond ">>> **Pebsi Command List**(*Messages with a <:slashcommand:1011483071675109458> after them have support for slash commands!*):
+        *<@1003128494156435536> opinion on [insert text here]*: Pebsi will state its opinion on your given text.<:slashcommand:1011483071675109458>
+        *pe:roll [insert number].[insert number]*: Pebsi will give you a random number between the 2 provided integers.<:slashcommand:1011483071675109458>
         *pe:say [insert text here]:* Pebsi will delete your command and will send your given text.
-        *pe:dm [insert user id OR ping user] [insert text(NO NUMBERS!)]:* Pebsi will DM the given user-id the chosen text to send.
+        *pe:dm [insert user id OR ping user] [insert text(NO NUMBERS!)]:* Pebsi will DM the given user-id the chosen text to send.<:slashcommand:1011483071675109458>
         *pe:dmjack [insert text here]*: Pebsi will DM 'Jack At it Again' the chosen text.
-        *pe:purge [insert number]*: Pebsi will delete as many messages as you told it to (Command requires the manage_messages permission) 
+        *pe:purge [insert number]*: Pebsi will delete as many messages as you told it to (Command requires the manage_messages permission) <:slashcommand:1011483071675109458>
 **Pebsi Feature List:**
         *Auto-pin:* Pebsi will automatically pin any message that recieves 3 or more ⭐ reactions.
         
@@ -120,9 +127,10 @@ bot.message(from: not!([''])) { |msg|
     end
     if msg.text.downcase == 'pe:experimental'
         msg.respond ">>> **Experimental Pebsi Commands:**
-        *pe:ymlAdd [key name] [value]*: Description coming soon
-        *pe:ymlFind [key name]*: Description coming soon
-        *pe:ymlAll*: Description coming soon
+        *pe:tagCreate [tag name] [value]*: Create a new tag with the given input.
+        *pe:tagSearch [tag name]*: Searches for the tag with the name given, name given must be exact.
+        *pe:tagAll*: Will send a message displaying all the current tags.
+
 **These commands may be buggy and unstable as they are still in beta! The command names may change or be removed in the future!**"
     end
     
@@ -138,12 +146,30 @@ bot.message(from: ['Idk837384', 'Ettecentric']) { |msg|
         msg.respond msg.text
         msg.message.delete
     end
-    if msg.text.downcase.split(' ')[0] == 'pe:ymldel'
+    
+    if ((msg.text.downcase.split(' ')[0] == 'pe:tagdelete') || (msg.text.downcase.split(' ')[0] == 'pe:tagdel'))
         data=YAML.load(File.open("test.yml"))
         data[msg.text.downcase.split(' ')[1]]=nil
         data.compact!
         File.open("test.yml", "w") {|f| f.write(data.to_yaml)}
-        msg.respond 'YML Key "' + msg.text.split(' ')[1] + '" was deleted from the YML file!'
+        msg.respond 'Tag "' + msg.text.split(' ')[1] + '" was deleted from the tag database!'
+    end
+
+    if msg.text.downcase.split(' ')[0] == 'pe:blacklist'
+        usli=YAML.load(File.open("tiMe.yml"))
+        user=msg.message.mentions[0]
+        user.on(msg.message.server).add_role('1003135748251324546')
+        if msg.text.downcase.split(' ')[3] == 'minute'
+            @time=@minute*msg.text.downcase.split(' ')[2].to_i
+        elsif msg.text.downcase.split(' ')[3] == 'hour'
+            @time=@hour*msg.text.downcase.split(' ')[2].to_i
+        elsif msg.text.downcase.split(' ')[3] == 'day'
+            @time=@day*msg.text.downcase.split(' ')[2].to_i
+        end
+        @curTi=Time.now
+        @curTi+=@time
+        usli[user.id]=@curTi.to_i
+        File.open("tiMe.yml", "w") {|f| f.write(usli.to_yaml(:inline => false))}
     end
 }
 bot.message(in: "#pebsi") { |msg|
@@ -177,17 +203,17 @@ bot.mention() { |msg|
     rando = rand(0..6)
 
   #puts msg.text.split(' ')[msg.text.split(' ').length-1]    
-  Linguistics.use :eng
+  #Linguistics.use :eng
   msg.text.gsub!(/[?]/, "")
   msg.text.gsub!(/<@1003128494156435536> opinion on/, '')
   msg.text.gsub!(/<@1003128494156435536> Opinion on/, '')
-  pluralMSG = msg.text.split(/\W/).last.en.plural(2)
+ # pluralMSG = msg.text.split(/\W/).last.en.plural(2)
   #puts pluralMSG
   #puts msg.text.split(' ')[msg.text.split(' ').length-1]
 
 #pluralMSG == msg.text.split(' ')[msg.text.split(' ').length-1]
-  #if msg.text.downcase[msg.text.downcase.length-1] == 's'
-  if pluralMSG.length < msg.text.split(' ')[msg.text.split(' ').length-1].length
+  if msg.text.downcase[msg.text.downcase.length-1] == 's'
+  #if pluralMSG.length < msg.text.split(' ')[msg.text.split(' ').length-1].length
     aBsis="are"
   else
     aBsis='is'
